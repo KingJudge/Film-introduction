@@ -78,7 +78,7 @@
         curPageView.currentPage = 1;
         curPageView.numberOfPages = totalPage;
         curPageView.pageIndicatorTintColor = [UIColor grayColor];
-        curPageView.currentPageIndicatorTintColor = [UIColor colorWithHexString:@"53CE70"];
+        //curPageView.currentPageIndicatorTintColor = [UIColor colorWithHexString:@"53CE70"];
         //        curPageView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.5f];
         [curPageView setUserInteractionEnabled:NO];
         curPageView.backgroundColor = [UIColor clearColor];
@@ -192,11 +192,11 @@ void UIImageFromURL(NSURL *URL, void (^imageBlock)(UIImage *image), void (^error
     if (imagesArray.count == 1) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:scrollFrame];
         imageView.userInteractionEnabled = YES;
-        if ([[imagesArray objectAtIndex:0] isKindOfClass:[NSString class]]) {
+        /*if ([[imagesArray objectAtIndex:0] isKindOfClass:[NSString class]]) {
             [imageView sd_setImageWithURL:[NSURL URLWithString:imagesArray[0]]];
         }else{
             imageView = [imagesArray objectAtIndex:0];
-        }
+        }*/
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                     action:@selector(handleTap:)];
         imageView.userInteractionEnabled = YES;

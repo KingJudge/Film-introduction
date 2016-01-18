@@ -7,12 +7,10 @@
 //
 
 #import "FirstViewController.h"
-#import "XhrStoreScrollView.h"
 @interface FirstViewController ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (strong,nonatomic) NSMutableArray *objectsForShow;
 @property (strong, nonatomic) UIPageControl *pageControl;
 @property (nonatomic, strong) NSTimer *timer;
 
@@ -74,7 +72,9 @@
         page++;
     }
     CGFloat x = page * _headerView.frame.size.width;
-    self.scrollView.contentOffset = CGPointMake(x, 0);
+    [UIView animateWithDuration:0.3 animations:^{
+        self.scrollView.contentOffset = CGPointMake(x, 0);
+    }];
 
 }
 
@@ -83,6 +83,7 @@
     CGFloat x = scrollView.contentOffset.x;
     int page = (x + scrollviewW / 2) /  scrollviewW;
     self.pageControl.currentPage = page;
+    
     
 }
 
@@ -96,6 +97,7 @@
 
 - (void)addTimer{
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+    
 }
 
 - (void)removeTimer{

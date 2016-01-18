@@ -20,6 +20,7 @@
 		FEF924881C4C912600F92921 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF924871C4C912600F92921 /* FirstViewController.m */; };
 		FEF9248B1C4C916600F92921 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF9248A1C4C916600F92921 /* SecondViewController.m */; };
 		FEF9248F1C4C91DB00F92921 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF9248E1C4C91DB00F92921 /* Second.storyboard */; };
+		FEF924941C4CBEDB00F92921 /* XhrStoreScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF924921C4CBEDB00F92921 /* XhrStoreScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		FEF924891C4C916600F92921 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		FEF9248A1C4C916600F92921 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		FEF9248E1C4C91DB00F92921 /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		FEF924921C4CBEDB00F92921 /* XhrStoreScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhrStoreScrollView.m; sourceTree = "<group>"; };
+		FEF924931C4CBEDB00F92921 /* XhrStoreScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhrStoreScrollView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 		F4D632CB1C4C8B9600FA1167 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				FEF924911C4CBEAE00F92921 /* 3rd */,
 				FEF924821C4C8E7D00F92921 /* Model */,
 				FEF924811C4C8E6B00F92921 /* Controller */,
 				FEF924801C4C8E3E00F92921 /* View */,
@@ -191,6 +195,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEF924911C4CBEAE00F92921 /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				FEF924921C4CBEDB00F92921 /* XhrStoreScrollView.m */,
+				FEF924931C4CBEDB00F92921 /* XhrStoreScrollView.h */,
+			);
+			name = 3rd;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF924941C4CBEDB00F92921 /* XhrStoreScrollView.m in Sources */,
 				F4D632D41C4C8B9600FA1167 /* ViewController.m in Sources */,
 				FEF924881C4C912600F92921 /* FirstViewController.m in Sources */,
 				F4D632D11C4C8B9600FA1167 /* AppDelegate.m in Sources */,

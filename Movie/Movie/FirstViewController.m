@@ -7,13 +7,15 @@
 //
 
 #import "FirstViewController.h"
-
+#import "XhrStoreScrollView.h"
 @interface FirstViewController ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong,nonatomic) NSMutableArray *objectsForShow;
 @property (strong, nonatomic) UIPageControl *pageControl;
 @property (nonatomic, strong) NSTimer *timer;
+
 
 @end
 
@@ -51,23 +53,29 @@
         imageView.image = [UIImage imageNamed:name];
         self.scrollView.showsHorizontalScrollIndicator = NO;
         [self.scrollView addSubview:imageView];
+
+                
+        
     }
     CGFloat contentW = totalCount *imageW;
     self.scrollView.contentSize = CGSizeMake(contentW, rect.size.height);
     self.scrollView.pagingEnabled = YES;
     self.scrollView.delegate = self;
+    
+
     [self addTimer];
 }
 
 - (void)nextImage{
     int page = (int)self.pageControl.currentPage;
-    if (page == 4) {
+    if (page == 5) {
         page = 0;
     }else{
         page++;
     }
     CGFloat x = page * _headerView.frame.size.width;
     self.scrollView.contentOffset = CGPointMake(x, 0);
+
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -75,6 +83,7 @@
     CGFloat x = scrollView.contentOffset.x;
     int page = (x + scrollviewW / 2) /  scrollviewW;
     self.pageControl.currentPage = page;
+    
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{

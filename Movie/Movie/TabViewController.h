@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FirstViewController.h"
+#import "SecondViewController.h"
 
-@interface TabViewController : UIViewController
+@interface TabViewController : UITabBarController <UITabBarControllerDelegate>
+
+@property (strong,nonatomic) UINavigationController *firstNC;
+@property (strong,nonatomic) FirstViewController *firstVC;
+
+@property (strong,nonatomic) UINavigationController *SecondNC;
+@property (strong,nonatomic) SecondViewController *SecondVC;
 
 @end

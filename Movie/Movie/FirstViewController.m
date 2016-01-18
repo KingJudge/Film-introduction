@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (self.navigationController.tabBarItem.tag == 0) {
+        self.navigationItem.title = @"First";
+    } else {
+        self.navigationItem.title = @"Second";
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {

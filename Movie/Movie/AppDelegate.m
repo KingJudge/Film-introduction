@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "TabViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,8 +16,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //初始化主窗口并将主窗口设置为屏幕大小
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    //将该窗口设置为keywindow
+    [self.window makeKeyAndVisible];
+    //获得main。story实例
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    //在main.story中找到名为tab的页面
+    TabViewController *tabVC = [storyboard instantiateViewControllerWithIdentifier:@"Tab"];
+    //将上述页面设置为app入口
+    self.window.rootViewController = tabVC;
     return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

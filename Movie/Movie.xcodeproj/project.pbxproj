@@ -16,6 +16,10 @@
 		F4D632DF1C4C8B9600FA1167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D632DD1C4C8B9600FA1167 /* LaunchScreen.storyboard */; };
 		F4D632EA1C4C8B9600FA1167 /* MovieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D632E91C4C8B9600FA1167 /* MovieTests.m */; };
 		F4D632F51C4C8B9600FA1167 /* MovieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D632F41C4C8B9600FA1167 /* MovieUITests.m */; };
+		FEF924851C4C910600F92921 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF924841C4C910600F92921 /* TabViewController.m */; };
+		FEF924881C4C912600F92921 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF924871C4C912600F92921 /* FirstViewController.m */; };
+		FEF9248B1C4C916600F92921 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF9248A1C4C916600F92921 /* SecondViewController.m */; };
+		FEF9248F1C4C91DB00F92921 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF9248E1C4C91DB00F92921 /* Second.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,13 @@
 		F4D632F01C4C8B9600FA1167 /* MovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D632F41C4C8B9600FA1167 /* MovieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieUITests.m; sourceTree = "<group>"; };
 		F4D632F61C4C8B9600FA1167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEF924831C4C910600F92921 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
+		FEF924841C4C910600F92921 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
+		FEF924861C4C912600F92921 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		FEF924871C4C912600F92921 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		FEF924891C4C916600F92921 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		FEF9248A1C4C916600F92921 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		FEF9248E1C4C91DB00F92921 /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +114,9 @@
 		F4D632CB1C4C8B9600FA1167 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
-				F4D632CF1C4C8B9600FA1167 /* AppDelegate.h */,
-				F4D632D01C4C8B9600FA1167 /* AppDelegate.m */,
-				F4D632D21C4C8B9600FA1167 /* ViewController.h */,
-				F4D632D31C4C8B9600FA1167 /* ViewController.m */,
-				F4D632D51C4C8B9600FA1167 /* Main.storyboard */,
-				F4D632DB1C4C8B9600FA1167 /* Assets.xcassets */,
-				F4D632DD1C4C8B9600FA1167 /* LaunchScreen.storyboard */,
-				F4D632E01C4C8B9600FA1167 /* Info.plist */,
-				F4D632D81C4C8B9600FA1167 /* Movie.xcdatamodeld */,
+				FEF924821C4C8E7D00F92921 /* Model */,
+				FEF924811C4C8E6B00F92921 /* Controller */,
+				FEF924801C4C8E3E00F92921 /* View */,
 				F4D632CC1C4C8B9600FA1167 /* Supporting Files */,
 			);
 			path = Movie;
@@ -120,6 +125,9 @@
 		F4D632CC1C4C8B9600FA1167 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F4D632E01C4C8B9600FA1167 /* Info.plist */,
+				F4D632CF1C4C8B9600FA1167 /* AppDelegate.h */,
+				F4D632D01C4C8B9600FA1167 /* AppDelegate.m */,
 				F4D632CD1C4C8B9600FA1167 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -141,6 +149,40 @@
 				F4D632F61C4C8B9600FA1167 /* Info.plist */,
 			);
 			path = MovieUITests;
+			sourceTree = "<group>";
+		};
+		FEF924801C4C8E3E00F92921 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4D632D51C4C8B9600FA1167 /* Main.storyboard */,
+				F4D632DB1C4C8B9600FA1167 /* Assets.xcassets */,
+				F4D632DD1C4C8B9600FA1167 /* LaunchScreen.storyboard */,
+				FEF9248E1C4C91DB00F92921 /* Second.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FEF924811C4C8E6B00F92921 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4D632D21C4C8B9600FA1167 /* ViewController.h */,
+				F4D632D31C4C8B9600FA1167 /* ViewController.m */,
+				FEF924831C4C910600F92921 /* TabViewController.h */,
+				FEF924841C4C910600F92921 /* TabViewController.m */,
+				FEF924861C4C912600F92921 /* FirstViewController.h */,
+				FEF924871C4C912600F92921 /* FirstViewController.m */,
+				FEF924891C4C916600F92921 /* SecondViewController.h */,
+				FEF9248A1C4C916600F92921 /* SecondViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FEF924821C4C8E7D00F92921 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4D632D81C4C8B9600FA1167 /* Movie.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF9248F1C4C91DB00F92921 /* Second.storyboard in Resources */,
 				F4D632DF1C4C8B9600FA1167 /* LaunchScreen.storyboard in Resources */,
 				F4D632DC1C4C8B9600FA1167 /* Assets.xcassets in Resources */,
 				F4D632D71C4C8B9600FA1167 /* Main.storyboard in Resources */,
@@ -274,9 +317,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D632D41C4C8B9600FA1167 /* ViewController.m in Sources */,
+				FEF924881C4C912600F92921 /* FirstViewController.m in Sources */,
 				F4D632D11C4C8B9600FA1167 /* AppDelegate.m in Sources */,
+				FEF9248B1C4C916600F92921 /* SecondViewController.m in Sources */,
 				F4D632DA1C4C8B9600FA1167 /* Movie.xcdatamodeld in Sources */,
 				F4D632CE1C4C8B9600FA1167 /* main.m in Sources */,
+				FEF924851C4C910600F92921 /* TabViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +548,7 @@
 				F4D632FB1C4C8B9600FA1167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4D632FC1C4C8B9600FA1167 /* Build configuration list for PBXNativeTarget "MovieTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +557,7 @@
 				F4D632FE1C4C8B9600FA1167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4D632FF1C4C8B9600FA1167 /* Build configuration list for PBXNativeTarget "MovieUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +566,7 @@
 				F4D633011C4C8B9600FA1167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

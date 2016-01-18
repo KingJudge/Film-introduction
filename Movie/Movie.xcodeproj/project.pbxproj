@@ -95,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D632CB1C4C8B9600FA1167 /* Movie */,
+				FEF924901C4CA28400F92921 /* Frameworks */,
 				F4D632E81C4C8B9600FA1167 /* MovieTests */,
 				F4D632F31C4C8B9600FA1167 /* MovieUITests */,
 				F4D632CA1C4C8B9600FA1167 /* Products */,
@@ -183,6 +184,13 @@
 				F4D632D81C4C8B9600FA1167 /* Movie.xcdatamodeld */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		FEF924901C4CA28400F92921 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
